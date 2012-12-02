@@ -174,6 +174,11 @@ module Foursquare2
       return_error_or_body(response, response.body.response)
     end
 
+    def venue_events(venue_id)
+      response = connection.get("venues/#{venue_id}/events")
+      return_error_or_body(response, response.body.response)
+    end
+
     #
     #Returns a list of venues managed
     #
